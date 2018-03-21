@@ -6,7 +6,7 @@ before_install:
   - sudo apt-get update -qq
 
 install:
-  - sudo apt-get install -y -qq qt510-meta-full
+  - sudo apt-get install -y qt510-meta-full
 
 script:
   - source /opt/qt510/bin/qt510-env.sh
