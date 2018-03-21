@@ -1,0 +1,17 @@
+sudo: required
+dist: trusty
+
+before_install:
+  - sudo add-apt-repository ppa:beineri/opt-qt5101-trusty
+  - sudo apt-get update -qq
+
+install:
+  - sudo apt get install -y -qq qt510[QTPACKAGE]
+
+script:
+  - source /opt/qt510/bin/qt510-env.sh
+  - cd src
+  - /opt/qt510/bin/qmake -project
+  - /opt/qt510/bin/qmake test.pro
+  - make
+
