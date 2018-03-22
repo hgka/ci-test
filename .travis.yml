@@ -10,7 +10,6 @@ install:
 
 script:
   - source /opt/qt510/bin/qt510-env.sh
-  - cd src
   - /opt/qt510/bin/qmake -project
   - /opt/qt510/bin/qmake test.pro
   - make
